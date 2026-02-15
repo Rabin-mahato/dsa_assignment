@@ -6,7 +6,7 @@ To generate an array of random values between 1 and 1000, sort them using a chos
 ### Data Structure  
 An array will be used to store the random integer numbers.
 
-###Sorting Algorithms Used  
+### Sorting Algorithms Used  
 1. Bubble Sort  
 2. Selection Sort  
 3. Insertion Sort  
