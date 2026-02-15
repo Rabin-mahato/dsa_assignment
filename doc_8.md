@@ -1,22 +1,22 @@
-#Program 8: Performance Count of Random Number Sorting
+# Program 8: Performance Count of Random Number Sorting
 
-##Objective  
+## Objective  
 To generate an array of random values between 1 and 1000, sort them using a chosen sorting method then count the number of comparisons and swaps made.
 
-Data Structure  
+### Data Structure  
 An array will be used to store the random integer numbers.
 
-Sorting Algorithms Used  
+###Sorting Algorithms Used  
 1. Bubble Sort  
 2. Selection Sort  
 3. Insertion Sort  
 4. Merge Sort  
 
-#Global Variables  
+# Global Variables  
 comparisons → Number of comparisons performed  
 swaps → Number of swaps performed
 
-#Program Flow  
+## Program Flow  
 1. User inputs N, the number of elements to generate.  
 2. The program generates an array of integers randomly using rand().  
 3. Displays the unsorted integers.  
@@ -25,7 +25,7 @@ swaps → Number of swaps performed
 6. Displays the sorted integers.  
 7. Displays total number of comparisons and swaps performed.
 
-#Sample Output  
+# Sample Output  
 
 Enter number of elements (N): 5  
 Numbers Before Sort:  
