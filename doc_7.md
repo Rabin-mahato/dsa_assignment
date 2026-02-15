@@ -1,6 +1,7 @@
-The objective of this program is to implement Dijkstra's shortest path algorithm for finding the shortest path from one node (the starting node) to all other nodes. The algorithm will use a weighted graph.
+ # objective: 
+ To implement Dijkstra's shortest path algorithm for finding the shortest path from one node (the starting node) to all other nodes. The algorithm will use a weighted graph.
 
-There are three structures that Dijkstra will use in this program to implement the above mentioned algorithm:
+#There are three structures that Dijkstra will use in this program to implement the above mentioned algorithm:
 
 1. The adjacency matrix represents the weighted graph. The matrix is 2-dimensional and [u][v] = weight indicates the edges from u to v.
 
@@ -9,7 +10,7 @@ There are three structures that Dijkstra will use in this program to implement t
 3. The visited array indicates whether or not a vertex has been visited or processed.
 
 
-There are two functions that are implemented within this program.
+# There are two functions that are implemented within this program.
 
 i. findMinVertex - This function will locate the unvisited vertex in the graph that is at the minimum distance from the source vertex. 
 
@@ -22,7 +23,7 @@ ii. dijkstra(int source) - This function implements the Dijkstra Algorithm which
 5. repeating until all vertices have been processed.
 
 
-An example of a graph will be:
+# An example of a graph will be:
 
 Vertices - 0,1,2,3,4
 The weighted edges between the vertices in the example will be:
@@ -45,7 +46,7 @@ The main function will perform the following tasks:
 3. Call Dijkstra's shortest path algorithm.
 4. Display the shortest distances.
 
-#Expected Output from the above main function
+# Expected Output from the above main function
 
 Dijkstra Shortest Path Algorithm(Start=0)
 
@@ -56,7 +57,7 @@ Vertex  Shortest Distance from Source
 3    30
 4    60
 
-Conclusion:
+# Conclusion:
 
 Dijkstra's shortest path algorithm works efficiently for all graphs where the weights are positive.
 
