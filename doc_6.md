@@ -2,7 +2,7 @@
 
 ## Objective: Create a min heap and max heap from the provided unordered array using heapify methods.
 
-###Data Structure Used
+### Data Structure Used
 Heaps are stored as arrays. A heap is a complete binary tree represented in array format, where:
 The parent is at the index i
 The left child is at index 2*i +1
