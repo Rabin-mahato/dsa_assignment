@@ -1,4 +1,4 @@
-Write in a different way
+
 
 #Program # 3: Reverse Traversal of a Linked List
 
