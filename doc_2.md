@@ -1,6 +1,6 @@
-## Program 2: Infix to Postfix Conversion and Evaluation
+# Program 2: Infix to Postfix Conversion and Evaluation
 
-# Aim :To convert an infix mathematical expression into postfix and then evaluate it.
+## Aim :To convert an infix mathematical expression into postfix and then evaluate it.
 
 
 # Data Structures Used
