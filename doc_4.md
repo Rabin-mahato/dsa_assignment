@@ -1,41 +1,77 @@
-# Week 4: Implementing a doubly linked list.
-Purpose: This program demonstrates how to create a doubly linked list with structures.  Your list will allow:
-1. Insertion after a node.
-2. Deletion of a node.
+# Program 4: Doubly Linked List Implementation
 
-Defining our Data Structure
+## Aim
+
+To implement a doubly linked list using structure and perform:
+1. Insert after a given node
+2. Delete a node
+
+---
+
+## Data Structure Definition
 
 struct Node {
-  int data; // stores data for element
-  struct Node* prev; // points to the previous node in the list
-  struct Node* next; // points to the next node in the list
+    int data;
+    struct Node* prev;
+    struct Node* next;
 };
 
-Note: You can traverse through a doubly linked list in both directions (forward and backward).
+Explanation:
 
+- data → stores value
+- prev → pointer to previous node
+- next → pointer to next node
 
-Functions in the Implementation
+In doubly linked list, traversal can happen in both forward and backward directions.
 
-1.createNode(int value) - allocates space and creates new node.
-2.insertEnd(struct Node* head, int value) - inserts an initial node(s) at the end of the list.
-3.insertAfter(struct Node* node, int value) - inserts a new node after the specified node. Updates both next and previous pointers correctly.
-4.deleteNode(struct Node* head, struct Node* node) - deletes the specified node and updates pointers for adjacent nodes.
-5.display(struct Node* head) - displays the list from the head (forward) to the tail (backward).
-6.Main Functionality of Program
+---
 
-1. Create a list with 10, 20, 30
-2. Insert 25 after 20 in the list
-3. Delete 30 from the list
-4. Output the list after each action
+## Functions Implemented
 
-Output from Program
+### createNode(int value)
+Allocates memory and initializes a new node.
 
-List before any actions:
+### insertEnd(struct Node* head, int value)
+Used to create initial list by inserting nodes at the end.
+
+### insertAfter(struct Node* node, int value)
+Inserts a new node after a given node.
+Adjusts both next and prev pointers correctly.
+
+### deleteNode(struct Node* head, struct Node* node)
+Deletes the given node and updates neighboring pointers.
+
+### display(struct Node* head)
+Displays list in forward direction.
+
+---
+
+## Main Function Overview
+
+1. Create list: 10, 20, 30
+2. Insert 25 after 20
+3. Delete node 30
+4. Display list after each operation
+
+---
+
+## Sample Output
+
+Initial List:
 10 <-> 20 <-> 30 <-> NULL
 
-List after 25 has been inserted after 20:
+Insert 25 after 20:
 10 <-> 20 <-> 25 <-> 30 <-> NULL
 
-List after 30 has been deleted:
+Delete node with value 30:
+10 <-> 20 <-> 25 <-> NULL
+
+---
+
+## Conclusion
+
+Doubly linked list allows efficient insertion and deletion 
+because it maintains both previous and next pointers.
+
 10 <-> 20 <-> 25 <-> NULL
 Conclusion: The structure of a doubly linked list enables efficient insertion and deletion because both previous and next pointers are maintained.
