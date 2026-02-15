@@ -1,6 +1,7 @@
 # Program 2: Infix to Postfix Conversion and Evaluation
 
-## Aim :To convert an infix mathematical expression into postfix and then evaluate it.
+## Aim 
+To convert an infix mathematical expression into postfix and then evaluate it.
 
 
 # Data Structures Used
@@ -14,7 +15,7 @@ Two stacks are used:
    - It is used to evaluate postfix expressions.
 
 
-# Functions Description
+## Functions Description
 
 1.initChar() / initInt()
 Initialize stack by setting top = -1.
@@ -54,7 +55,7 @@ Postfix Expression: 324*+
 Evaluated Result: 11
 
 
-## #Conclusion
+## # Conclusion
 
 Stack is used to perform infix to postfix conversion and evaluation.
 
