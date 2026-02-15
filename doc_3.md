@@ -1,6 +1,6 @@
 
 
-#Program # 3: Reverse Traversal of a Linked List
+# Program3: Reverse Traversal of a Linked List
 
 ##Goal: Implement reverse traversal of a single linked List and demonstrate this in the main function.
 
@@ -14,7 +14,7 @@ struct node {
 - The "data" member holds an integer value.
 - The "next" member holds a pointer to the next node in the list.
 
-#Functions that have been implemented
+##Functions that have been implemented
 
 1.createNode(int value)
 Allocates space for a new node and initializes both the "data" and the "next" pointer.
