@@ -1,64 +1,92 @@
- # objective: 
- To implement Dijkstra's shortest path algorithm for finding the shortest path from one node (the starting node) to all other nodes. The algorithm will use a weighted graph.
+# Program 7: Dijkstra’s Algorithm for Shortest Path
 
-#There are three structures that Dijkstra will use in this program to implement the above mentioned algorithm:
+## Aim
 
-1. The adjacency matrix represents the weighted graph. The matrix is 2-dimensional and [u][v] = weight indicates the edges from u to v.
+To implement Dijkstra’s algorithm to find the shortest path from a source node to all other nodes in a weighted graph.
 
-2. The distance array stores the shortest distance from the source to each vertex. 
+---
 
-3. The visited array indicates whether or not a vertex has been visited or processed.
+## Data Structure Used
 
+### Adjacency Matrix
 
-# There are two functions that are implemented within this program.
+int graph[MAX][MAX];
 
-i. findMinVertex - This function will locate the unvisited vertex in the graph that is at the minimum distance from the source vertex. 
+Used to represent weighted graph.
+If graph[u][v] = weight → there is an edge between u and v.
 
-ii. dijkstra(int source) - This function implements the Dijkstra Algorithm which includes:
+### Distance Array
 
-1. Function to Init.All distances to INFINITY.
-2. Set Source to be 0.
-3. Choosing the minimum distance vertex.
-4. Update distances of all adjacent vertices to include the distance from source + distance of the selected vertex.
-5. repeating until all vertices have been processed.
+int dist[MAX];
 
+Stores shortest distance from source to each vertex.
 
-# An example of a graph will be:
+### Visited Array
 
-Vertices - 0,1,2,3,4
-The weighted edges between the vertices in the example will be:
+int visited[MAX];
 
-0 - 1(10)
-0 - 3(30)
-0 - 4(100)
-1 - 2(50)
-2 - 3(20)
-2 - 4(10)
-3 - 4(60)
+Marks whether a vertex is finalized (visited) or not.
 
+---
 
-# Main Function Description
+## Functions Implemented
 
-The main function will perform the following tasks:
+### findMinVertex()
 
-1. Define the weighted graph.
-2. Define the source vertex.
-3. Call Dijkstra's shortest path algorithm.
-4. Display the shortest distances.
+Finds the unvisited vertex having minimum distance value.
 
-# Expected Output from the above main function
+### dijkstra(int source)
 
-Dijkstra Shortest Path Algorithm(Start=0)
+Implements Dijkstra’s algorithm:
 
-Vertex  Shortest Distance from Source
-0    0
-1    10
-2    50
-3    30
-4    60
+1. Initialize all distances to infinity.
+2. Set source distance to 0.
+3. Select minimum distance vertex.
+4. Update distances of adjacent vertices.
+5. Repeat until all vertices are visited.
 
-# Conclusion:
+---
 
-Dijkstra's shortest path algorithm works efficiently for all graphs where the weights are positive.
+## Example Graph Used
 
-The time complexity of this algorithm using the adjacency matrix is O(n^2) where n = the number of vertices in the adjacent matrix.
+Vertices: 0, 1, 2, 3, 4
+
+Weighted edges:
+
+0 - 1 (10)  
+0 - 3 (30)  
+0 - 4 (100)  
+1 - 2 (50)  
+2 - 3 (20)  
+2 - 4 (10)  
+3 - 4 (60)
+
+---
+
+## Main Function Overview
+
+1. Define weighted graph.
+2. Choose source vertex (0).
+3. Call dijkstra().
+4. Print shortest distances.
+
+---
+
+## Sample Output
+
+Dijkstra's Algorithm (Source = 0)
+
+Vertex  Distance from Source
+0       0
+1       10
+2       50
+3       30
+4       60
+
+---
+
+## Conclusion
+
+Dijkstra’s algorithm finds shortest paths efficiently 
+for graphs with non-negative weights.
+Time complexity using adjacency matrix is O(n²).
