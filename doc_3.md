@@ -2,7 +2,7 @@
 
 #Program # 3: Reverse Traversal of a Linked List
 
-Goal: Implement reverse traversal of a single linked List and demonstrate this in the main function.
+##Goal: Implement reverse traversal of a single linked List and demonstrate this in the main function.
 
 #Data Structure Definition
 A single linked list node will be defined as follows:
