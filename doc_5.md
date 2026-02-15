@@ -1,60 +1,89 @@
-# Program 4: Doubly Linked List Implementation  
-Aim: To implement a doubly linked list using a structure and perform:  
-1. Insert after a given node  
-2. Delete a node  
+# Program 5: Undirected Graph using Adjacency Matrix with BFS and DFS
 
-Data Structure Definition  
+## Aim
 
-```c  
-struct Node {  
-    int data;  
-    struct Node* prev;  
-    struct Node* next;  
-};  
-```  
+To implement an undirected graph using adjacency matrix and perform BFS and DFS traversal.
 
-Explanation:  
+---
 
-- data stores the value  
-- prev is a pointer to the previous node  
-- next is a pointer to the next node  
+## Data Structure Used
 
-In a doubly linked list, you can traverse in both forward and backward directions.  
+### Adjacency Matrix
 
-Functions Implemented  
+int adj[MAX][MAX];
 
-1. createNode(int value)`  
-Allocates memory and initializes a new node.  
+- 2D array used to represent edges.
+- If there is an edge between vertex u and v:
+    adj[u][v] = 1
+    adj[v][u] = 1 (because graph is undirected)
 
-2. insertEnd(struct Node* head, int value)`  
-Creates the initial list by adding nodes at the end.  
+### Visited Array
 
-3. insertAfter(struct Node* node, int value)`  
-Inserts a new node after a given node.  
-It correctly adjusts both next and prev pointers.  
+int visited[MAX];
 
-4. deleteNode(struct Node* head, struct Node* node)`  
-Deletes the specified node and updates neighboring pointers.  
+Used to track whether a vertex has been visited.
 
-5. display(struct Node* head)`  
-Displays the list in the forward direction.  
+---
 
-6. Main Function Overview  
+## Functions Implemented
 
-i. Create the list: 10, 20, 30  
-ii. Insert 25 after 20  
-iii. Delete node 30  
-iv. Display the list after each operation  
+### addEdge(int u, int v)
+Adds an undirected edge between vertices u and v.
 
-Sample Output  
+### BFS(int start)
+Implements Breadth First Search using queue.
+- Visits level by level.
+- Uses visited array to avoid repetition.
 
-Initial List:  
-10 <-> 20 <-> 30 <-> NULL  
+### DFS(int vertex)
+Implements Depth First Search using recursion.
+- Visits as deep as possible before backtracking.
 
-Insert 25 after 20:  
-10 <-> 20 <-> 25 <-> 30 <-> NULL  
+---
 
-Delete node with value 30:  
-10 <-> 20 <-> 25 <-> NULL  
+## Example Graph Used
 
-Conclusion: A doubly linked list allows for efficient insertion and deletion since it keeps track of both previous and next pointers.
+Vertices: 0, 1, 2, 3, 4
+
+Edges:
+0 - 1
+0 - 2
+1 - 3
+2 - 4
+
+Graph structure:
+
+        0
+       / \
+      1   2
+      |   |
+      3   4
+
+---
+
+## Main Function Overview
+
+1. Initialize adjacency matrix.
+2. Add edges.
+3. Call DFS starting from vertex 0.
+4. Call BFS starting from vertex 0.
+
+---
+
+## Sample Output
+
+DFS Traversal:
+0 1 3 2 4
+
+BFS Traversal:
+0 1 2 3 4
+
+---
+
+## Conclusion
+
+Adjacency matrix is simple to implement for small graphs.
+DFS explores depth-wise while BFS explores level-wise.
+
+Adjacency matrix is simple to implement for small graphs.
+DFS explores depth-wise while BFS explores level-wise.
